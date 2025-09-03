@@ -1,0 +1,6 @@
+user_id,item_id,user_age,user_height,user_weight,body_type,size_ordered,fit_rating,category,brand
+1,1001,28,180,75,Athletic,M,perfect,shirt,Brand A
+2,1002,35,175,82,Average,L,small,jeans,Brand B
+3,1003,42,185,90,Broad,XL,perfect,jacket,Brand C
+4,1004,31,172,68,Slim,S,large,pants,Brand D
+5,1005,26,178,70,Athletic,M,perfect,shirt,Brand E

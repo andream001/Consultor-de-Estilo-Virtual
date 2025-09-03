@@ -1,0 +1,29 @@
+# Data Science Core Libraries
+pandas>=1.5.0
+numpy>=1.24.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+scikit-learn>=1.2.0
+
+# Data Processing
+scipy>=1.10.0
+openpyxl>=3.0.0
+xlsxwriter>=3.0.0
+
+# Jupyter and Interactive Development
+jupyter>=1.0.0
+ipykernel>=6.20.0
+notebook>=6.5.0
+
+# Web Scraping and APIs (if needed)
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# Visualization
+plotly>=5.12.0
+
+# Progress bars and utilities
+tqdm>=4.64.0
+
+# Statistical analysis
+statsmodels>=0.13.0
