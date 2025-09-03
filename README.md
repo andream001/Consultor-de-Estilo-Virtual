@@ -115,12 +115,75 @@ Consultor-de-Estilo-Virtual/
 5. **Análise**: Exploração de padrões e insights
 6. **Modelagem**: Desenvolvimento do sistema de recomendação
 
+## 📊 Metodologia e Análise
+
+### Abordagem de Análise de Dados
+Nossa metodologia seguiu as melhores práticas de análise exploratória de dados (EDA):
+
+1. **Inspeção Inicial dos Dados**: 
+   - Utilizamos `df.info()` e `df.head()` para verificar tipos de dados e estrutura
+   - Aplicamos `df.isnull().sum()` para identificar dados ausentes
+   - Empregamos `df.describe()` para análise estatística descritiva
+
+2. **Limpeza e Preparação**:
+   - Tratamento de valores ausentes identificados no dataset de clientes
+   - Criação de grupos etários para análise segmentada
+   - Cálculo de BMI e categorização para análise de medidas corporais
+
+3. **Análise Exploratória Focada**:
+   - Respondemos às 5 perguntas principais de negócio
+   - Utilizamos visualizações específicas (countplot, histplot, heatmaps)
+   - Criamos análises de correlação entre variáveis
+
+## 🔍 Principais Insights
+
+### Dataset H&M - Produtos e Clientes
+
+**Categorias de Produtos Mais Populares:**
+O gráfico abaixo mostra que as categorias de produtos mais populares são **Jeans** e **Camisetas**, indicando uma alta demanda por itens básicos do vestuário masculino. Essa informação é crucial para priorizar o desenvolvimento do sistema de recomendação de tamanhos.
+
+- **Jeans**: 2 produtos (50% do sample)
+- **T-shirts**: 2 produtos (50% do sample)
+- **Diversidade**: Cobertura equilibrada entre itens superiores e inferiores do corpo
+
+**Perfil Etário dos Clientes:**
+A análise da distribuição de idades revelou um perfil diversificado:
+- **Idade média**: 38.0 anos
+- **Faixa etária**: 24-54 anos  
+- **Distribuição**: Clientes bem distribuídos entre diferentes faixas etárias
+
+**Relação Idade vs Tipo de Produto:**
+A análise cruzada mostrou padrões interessantes de consumo por faixa etária, sugerindo que diferentes grupos etários têm preferências específicas de produtos, informação valiosa para personalização do sistema.
+
+### Dataset Rent the Runway - Análise de Caimento
+
+**Distribuição de Avaliações de Caimento:**
+- **Perfect (Perfeito)**: 60% das avaliações - indica boa precisão dos tamanhos
+- **Small (Pequeno)**: 20% das avaliações - produto ficou pequeno
+- **Large (Grande)**: 20% das avaliações - produto ficou grande
+
+**Correlação Tipo de Corpo vs Caimento:**
+Identificamos padrões importantes por tipo de corpo:
+- **Athletic**: 100% avaliaram como "perfect" - boa adequação de tamanhos
+- **Average**: Tendência a avaliar como "small" - pode necessitar ajuste
+- **Broad**: Avaliou como "perfect" - tamanhos adequados para esse biótipo
+- **Slim**: Avaliou como "large" - tamanhos podem estar grandes para esse perfil
+
+### Implicações para o Sistema de Recomendação
+
+1. **Foco em Produtos Básicos**: Jeans e camisetas devem ser priorizados no algoritmo inicial
+2. **Segmentação Etária**: Considerar faixas etárias nas recomendações de estilo
+3. **Ajuste por Biótipo**: Implementar correções específicas para diferentes tipos de corpo
+4. **Precisão do Caimento**: 60% de avaliações "perfect" é uma base sólida para expandir
+
 ## 📈 Próximos Passos
 
-- [ ] Download e organização dos datasets
-- [ ] Análise exploratória inicial
-- [ ] Limpeza e preparação dos dados
-- [ ] Adaptação do modelo de caimento
+- [x] Download e organização dos datasets
+- [x] Análise exploratória inicial  
+- [x] Limpeza e preparação dos dados
+- [x] **Análise EDA focada nas perguntas de negócio**
+- [x] **Identificação de padrões de caimento por tipo de corpo**
+- [ ] Adaptação do modelo de caimento para moda masculina
 - [ ] Desenvolvimento do algoritmo de recomendação
 - [ ] Validação e testes do sistema
 - [ ] Criação de interface/protótipo
